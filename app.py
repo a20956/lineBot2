@@ -26,12 +26,12 @@ def callback():
    if (userText == 'สวัสดี') :
         sendText(user,'แฮร์สวัสดี')
     elif (userText == 'ไอ้บ้า') :
-        sendText(user,'มึงสิบ้า555+')
+        sendText(user,userText'มึงสิบ้า555+')
     elif (userText == 'สวยนะ') :
         sendText(user,'อยู่เเล้ว')
     else :
         sendText(user,'พิมพ์ใหม่สิอีควายกูอ่านไม่ออก')
-        return '',200
+    return '',200
 
 def sendText(user, text):
   LINE_API = 'https://api.line.me/v2/bot/message/reply'
