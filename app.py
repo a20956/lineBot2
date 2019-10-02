@@ -16,7 +16,7 @@ def webhook():
         return "OK"
 
 @app.route('/callback', methods=['POST'])
-def callback():
+def callback():  def sendText(user, text):
     json_line = request.get_json()
     json_line = json.dumps(json_line)
     decoded = json.loads(json_line)
@@ -30,8 +30,6 @@ def callback():
     elif (userText  == 'สวยนะ') :
         sendText(user,'อยู่เเล้ว')
     return '',200
-  
-    def sendText(user, text):
   LINE_API = 'https://api.line.me/v2/bot/message/reply'
   headers = {
     'Content-Type': 'application/json; charset=UTF-8',
